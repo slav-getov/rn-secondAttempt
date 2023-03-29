@@ -5,11 +5,12 @@ type HomeScreenProps = {
   children: string;
 };
 const HomeScreen = ({children}: HomeScreenProps) => {
-  return <Text style={styles.background}>{children}</Text>;
+  return <Text>{children}</Text>;
 };
+
 const styles = StyleSheet.create({
   background: {
-    backgroundColor: 'blue',
+    backgroundColor: 'red',
     color: 'white',
   },
 });

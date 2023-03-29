@@ -12,7 +12,7 @@ import {StyleSheet, Text, View} from 'react-native';
 function App(): JSX.Element {
   return (
     <View>
-      <Text>Hey there, attempt 5</Text>
+      <Text>Hey there, attempt 10</Text>
       <HomeScreen children="This is home screen element which accepts string as children" />
     </View>
   );
