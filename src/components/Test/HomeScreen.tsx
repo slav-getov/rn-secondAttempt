@@ -4,8 +4,8 @@ import {StyleSheet, Text} from 'react-native';
 type HomeScreenProps = {
   children: string;
 };
-const HomeScreen = ({children}: HomeScreenProps) => {
-  return <Text>{children}</Text>;
+const HomeScreen = ({children}: HomeScreenProps): JSX.Element => {
+  return <Text style={styles.background}>{children}</Text>;
 };
 
 const styles = StyleSheet.create({

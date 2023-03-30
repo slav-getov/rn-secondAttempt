@@ -7,13 +7,17 @@
 
 import React from 'react';
 import HomeScreen from './src/components/Test/HomeScreen';
+import DiceElement from './src/components/DiceElements/DiceElement';
 import {StyleSheet, Text, View} from 'react-native';
 
 function App(): JSX.Element {
   return (
     <View>
-      <Text>Hey there, attempt 10</Text>
+      <Text>Hey there, attempt 11</Text>
       <HomeScreen children="This is home screen element which accepts string as children" />
+      <View>
+        <DiceElement numberOnDiceSide={3} />
+      </View>
     </View>
   );
 }
@@ -33,7 +37,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   highlight: {
-    fontWeight: '700',
+    fontWeight: 'bold',
   },
 });
 
