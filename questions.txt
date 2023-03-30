@@ -1,0 +1,3 @@
+1. Do you use FlatList for any number of mappable data? Is this the more performant version of ScrollView?
+2. We know that in css we sometimes set * {...}. What is the best way to do this in rn?
+3. Do you use View for any single element as a wrapper? Why/Why not?

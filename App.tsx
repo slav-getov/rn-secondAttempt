@@ -5,18 +5,29 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import HomeScreen from './src/components/Test/HomeScreen';
 import DiceElement from './src/components/DiceElements/DiceElement';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, FlatList} from 'react-native';
 
 function App(): JSX.Element {
+  const [items, setItems] = useState([
+    {firstName: 'Mike', id: 0},
+    {firstName: 'Stephen', id: 1},
+    {firstName: 'Galle', id: 2},
+    {firstName: 'Judge', id: 3},
+    {firstName: 'Clarence', id: 4},
+  ]);
   return (
     <View>
       <Text>Hey there, attempt 11</Text>
       <HomeScreen children="This is home screen element which accepts string as children" />
       <View>
-        <DiceElement numberOnDiceSide={2} />
+        <FlatList
+          keyExtractor={item => item.firstName}
+          data={items}
+          renderItem={({item}) => <DiceElement numberOnDiceSide={item.id} />}
+        />
       </View>
     </View>
   );
@@ -38,6 +49,11 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: 'bold',
+  },
+  mainSection: {
+    backgroundColor: 'black',
+    //flex: 1,
+    //flex of 1 will handle full screen
   },
 });
 
