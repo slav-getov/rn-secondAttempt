@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 type DiceElementProps = {
   numberOnDiceSide: number;
@@ -8,9 +8,18 @@ type DiceElementProps = {
 const DiceElement = ({numberOnDiceSide}: DiceElementProps): JSX.Element => {
   return (
     <View>
-      <Text>{numberOnDiceSide}</Text>
+      <Text style={styles.dice}>{numberOnDiceSide}</Text>
     </View>
   );
 };
+const styles = StyleSheet.create({
+  dice: {
+    padding: 10,
+    fontSize: 20,
+    backgroundColor: 'blue',
+    color: 'white',
+    width: '50%',
+  },
+});
 
 export default DiceElement;

@@ -16,7 +16,7 @@ function App(): JSX.Element {
       <Text>Hey there, attempt 11</Text>
       <HomeScreen children="This is home screen element which accepts string as children" />
       <View>
-        <DiceElement numberOnDiceSide={3} />
+        <DiceElement numberOnDiceSide={2} />
       </View>
     </View>
   );
